@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script id="vertex-shader" type="x-shader/x-vertex">
+		attribute vec4 vPosition;
+		void main(){
+		gl_Position = vPosition;
+		}
+	</script>
+
+	<script id="fragment-shader" type="x-shader/x-fragment">
+		precision mediump float;
+		void main(){
+		gl_FragColor = vec4( 1.0, 0.0, 0.0, 1.0 );
+		}
+	</script>
+	<script type="text/javascript" src="Common/webgl-utils.js"></script>
+	<script type="text/javascript" src="Common/initShaders.js"></script>
+	<script type="text/javascript" src="Common/MV.js"></script>
+	<style >
+	canvas {
+    display: block;
+    margin: auto;
+    border: 5px solid red;
+    background: black;
+	}</style>
+	<title>TETRIS</title>
+</head>
+<body>
+	<h1 align="center">TETRIS</h1>
+	<canvas width="256" height="512"></canvas>
+	<h2 align="center">Press r to reset and q to quit</h2>
+<script src="game.js"></script>
+</body>
+</html>
